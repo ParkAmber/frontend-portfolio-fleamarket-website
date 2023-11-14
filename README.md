@@ -1,38 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Overview: 
+This project is an online flea market website. Its primary functionalities include file uploads and utilizing CRUD APIs for creating, updating, deleting, and fetching content. Additionally, I have implemented a login feature on the frontend that relies on authorization and authentication mechanisms.
 
-## Getting Started
+Challenges:
 
-First, run the development server:
+1. Ensuring that only edited content is updated upon implementing the update mutation, while retaining default values, to prevent unnecessary data mutations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+2. Displaying updated data in real-time on the browser after data deletion or updates.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Streamlining the Login Process: Restricting access only to valid tokens and, in the event of token expiration, obtaining a renewed token from the backend.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+4. Addressing browser functionality issues arising from Next.js hydration.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Solutions:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. If the state is not empty, add key-value pairs to an object and pass the object into variables for triggering the mutation.
 
-## Learn More
+2. Utilize the refetch function provided by GraphQL's useQuery to automatically refresh data.
 
-To learn more about Next.js, take a look at the following resources:
+3. During the login process, store the access token from the backend in the global state, specifically in Recoil. Use this access token for authorization as needed. Additionally, obtain a refresh token during login to automatically renew the access token when it expires.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Implementing post-browser load functionality using useEffect.
