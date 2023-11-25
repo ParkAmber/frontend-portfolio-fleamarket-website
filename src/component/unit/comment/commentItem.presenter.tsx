@@ -68,8 +68,6 @@ export default function CommentItem(props: any) {
                 onClick={onClickOpenUpdateImg}
               />{" "}
             </div>
-            {/* contents: <input type="text" onChange={onChangeContents} />
-          <button onClick={onClickOpenUpdateModal}>submit</button> */}
           </div>
         </div>
       ) : (
@@ -96,35 +94,6 @@ export default function CommentItem(props: any) {
             </div>
           </form>
         </div>
-
-        // <div className="detail-comment-fetch mt-60">
-        //   {props.dataFaQ?.fetchUseditemQuestions.map((el: any, i: number) => (
-        //     <div key={el._id} style={{ border: "2px solid red" }}>
-        //       <p>{el._id}</p>
-        //       <p>{el.contents}</p>
-        //       <p>{el.user.name}</p>
-        //       <p>{el.user.createdAt}</p>
-        //       {/* <p
-        //             dangerouslySetInnerHTML={{
-        //               __html: Dompurify.sanitize(String(el.contents)), //Dompurify.sanitize()=>  xss(cross site script)막아주는 라이브러리
-        //             }}
-        //           ></p> */}
-        //       <img
-        //         src="/mode-24px.png"
-        //         style={{ width: "20px", cursor: "pointer" }}
-        //         id={el._id}
-        //         onClick={onClickOpenUpdateImg}
-        //       />
-        //       <img
-        //         src="/clear-24px 2.png"
-        //         style={{ width: "20px", cursor: "pointer" }}
-        //         id={el._id}
-        //         onClick={props.onClickOpenDeleteModal}
-        //         //   onClick={onClickDelete}
-        //       />
-        //     </div>
-        //   ))}
-        // </div>
       )}
     </div>
   );
