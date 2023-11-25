@@ -124,17 +124,7 @@ export default function ProductDetailUI(props: IProductDetailCommentUIProps) {
           </div>
         </section>
       </div>
-      {/* <div>
-        {typeof window !== "undefined" && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: Dompurify.sanitize(
-                String(dataFaQ?.fetchUseditemQuestions[0].contents)
-              ), //Dompurify.sanitize()=>  xss(cross site script)막아주는 라이브러리
-            }}
-          ></div>
-        )}
-      </div> */}
+
     </>
   );
 }
