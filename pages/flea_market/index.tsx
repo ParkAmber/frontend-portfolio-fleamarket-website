@@ -48,10 +48,6 @@ export const BEST_USED_ITEMS = gql`
 `;
 export default function FleaMarket() {
   const router = useRouter();
-  // const { data } = useQuery(FETCH_BOARD, {
-  //   // variables: { boardId: String(router.query.boardId) },
-  //   variables: { boardId: "644ed5f7aef9f000281ba96c" },
-  // });
   const [search, setSearch] = useState("");
   const { data: dataBoards, refetch } = useQuery<
     Pick<IQuery, "fetchUseditems">,
@@ -62,12 +58,6 @@ export default function FleaMarket() {
   if (dataBoards?.fetchUseditems !== undefined) {
     console.log(dataBoards?.fetchUseditems);
   }
-
-  // const onClickPage = (e) => {
-  //   //검색에서 refetch할때, search 검색어가 onClickSearch해서 refetch에 이미 저장되어있는 상태이므로 추가로 search 포함하지 않아도 됨!!!!
-  //   void refetch({ page: Number(e.currentTarget.id) }); //여기 page는 변수 $page!!
-  // };
-
   const onChangeSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.currentTarget.value);
   };
@@ -182,15 +172,6 @@ export default function FleaMarket() {
           {dataBoards?.fetchUseditems.map((a: any, i: any) => (
             <div key={a._id}>
               <div className='category-item'>
-                {/* <img
-                    src={
-                      a.images[0] === ""
-                        ? `https://storage.googleapis.com/${a[2]?.images[0]}`
-                        : `https://storage.googleapis.com/${a.images[0]}`
-                    }
-                    // src={`https://storage.googleapis.com/${dataBoards?.fetchUseditems[i].images[0]}`}
-                    className="category-item-img"
-                  /> */}
                 {a.images[0] === undefined || null ? (
                   <img src='/banner.jpg' className='category-item-img' />
                 ) : (
