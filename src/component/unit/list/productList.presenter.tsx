@@ -52,15 +52,7 @@ export default function ProductListUI(props: IProductListUIProps) {
             style={{ cursor: "pointer" }}
           >
             <div className="category-item">
-              {/* <img
-                  src={
-                    a.images[0] === ""
-                      ? `https://storage.googleapis.com/${a[2]?.images[0]}`
-                      : `https://storage.googleapis.com/${a.images[0]}`
-                  }
-                  // src={`https://storage.googleapis.com/${dataBoards?.fetchUseditems[i].images[0]}`}
-                  className="category-item-img"
-                /> */}
+       
               {a.images[0] === undefined || null ? (
                 <img src="/banner.jpg" className="category-item-img" />
               ) : (
@@ -110,51 +102,7 @@ export default function ProductListUI(props: IProductListUIProps) {
             </div>
           </div>
         ))}
-        {/* </div> */}
-
-        {/* <div style={{ display: isClicked === "onSale" ? "block" : "none" }}>
-          {dataBest?.fetchUseditemsOfTheBest.map((a: any, i: any) => (
-            <div key={a._id}>
-              <div className="category-item">
-                {a.images[0] === undefined ? (
-                  <img src="/banner.jpg" className="category-item-img" />
-                ) : (
-                  <img
-                    src={`https://storage.googleapis.com/${a.images[0]}`}
-                    // src={`https://storage.googleapis.com/${dataBoards?.fetchUseditems[i].images[0]}`}
-                    className="category-item-img"
-                  />
-                )}
-
-                <div>
-                  <h3>{a.name}</h3>
-                  <p>{getDate(a.createdAt)}</p>
-                  <p className="text-gray">{a.contents}</p>
-                  <div className="star-wrapper">
-                    <p className="text-gray">{a.seller.name}</p>
-                    <S.StarWrapperFetch>
-                      {starPoint.map((atwo: number, itwo: number) => {
-                        return (
-                          <div key={atwo}>
-                            <S.TempStarFetch
-                              active={itwo + 1 <= a.pickedCount}
-                              // onClick={props.onClickStar}
-                              id={String(i + 1)}
-                            />{" "}
-                          </div>
-                        );
-                      })}
-                      <span className="star-count">
-                        {a.pickedCount} (100)
-                      </span>
-                    </S.StarWrapperFetch>
-                  </div>
-                </div>
-                <p className="price">$ {a.price}</p>
-              </div>
-            </div>
-          ))}
-        </div> */}
+       
       </section>
       <S.ButtonCon>
         <span
@@ -168,9 +116,6 @@ export default function ProductListUI(props: IProductListUIProps) {
         >
           {"<"}
         </span>
-        {/*  new Array(10).fill(1)=> 1로 배열 개수 10개인 array만들기!!. 여기애 1대신 '철수' 넣어도 됨!! */}
-        {/* startPage가 lastPage보다 작거나 같을때만 <Button2>~~~<Button2/> 이거 보여주고 아니면 <span>qqq</span>보여주라!!*/}
-        {/* 혹은 앞부분 식만 보여주고, 뒤에거 <span>qqq</span>는 안써줘도 됨!! */}
         {new Array(10).fill(1).map((_, i) =>
           i + props.startPage <= props.lastPage ? (
             <S.Button2
