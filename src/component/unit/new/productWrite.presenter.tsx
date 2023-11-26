@@ -28,9 +28,7 @@ export default function ProductWriteUI(props: IProductWriteUIProps) {
 							// defaultValue="Toronto"
 						/>
 					</S.AddressModal>
-					// <S.AddressModal open={true} onOk={handleOk} onCancel={handleCancel}>
-					//   <S.AddressSearchInput onComplete={onCompleteAddressSearch} />
-					// </S.AddressModal>
+			
 				)}
 				{/* <Header /> */}
 				<section className='new'>
@@ -136,35 +134,10 @@ export default function ProductWriteUI(props: IProductWriteUIProps) {
 									fileUrl={el}
 									onChangeFileUrls={props.onChangeFileUrls}
 								/>
-								// <>
-								//   {el !== "" ? (
-								//     <UploadImage
-								//       onClick={onClickUpload}
-								//       src={`https://storage.googleapis.com/${el}`}
-								//     />
-								//   ) : (
-								//     <UploadButton onClick={onClickUpload}>
-								//       <>+</>
-								//       <>Upload</>
-								//     </UploadButton>
-								//   )}
-								//   <UploadFileHidden
-								//     type="file"
-								//     ref={fileRef}
-								//     onChange={onChangeFile}
-								//   />
-								// </>
+							
 							))}
 						</div>
-						{/* <div className="photo-img">
-              {props.data?.fetchUseditem.images.map((el: any, i: number) => (
-                <img
-                  style={{ width: "100px" }}
-                  key={i}
-                  src={`https://storage.googleapis.com/${props.data?.fetchUseditem.images?.[i]}`}
-                />
-              ))}
-            </div> */}
+	
 					</div>
 					<div className='submit-btn-con mt-120'>
 						<button
