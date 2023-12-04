@@ -1,6 +1,6 @@
 # Online Flea Market Website
 + Demo: 
-
+![demo](https://github.com/ParkAmber/frontend-portfolio-fleamarket-website/blob/main/demo_.gif)
 
 
 
