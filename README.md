@@ -8,6 +8,9 @@
 ### **Overview:** 
 This project is an online flea market website. Its primary functionalities include file uploads and utilizing CRUD APIs for creating, updating, deleting, and fetching content. Additionally, I have implemented a login feature on the frontend that relies on authorization and authentication mechanisms.
 
+### **Project Objective:** 
+The primary objective of this online flea market website is to facilitate seamless transactions for users looking to buy and sell second-hand goods, especially in situations where in-person contact may be challenging. The platform enables users to easily browse, shop, and conduct transactions for pre-owned items. Additionally, the website enhances user interactions by providing features such as the ability to check the seller's location, facilitating in-person transactions. The integrated comment system further allows users to engage in a question-and-answer exchange, fostering a dynamic and interactive online marketplace.
+
 ### **Development Goals:** 
 Achieving a profound understanding of CRUD operations and mastering cache update mechanisms. Addressing challenges related to Next.js hydration to ensure seamless and efficient application performance.
 
